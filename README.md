@@ -1,9 +1,9 @@
-# React + Vite
+# App Functioning
+- Takes gitUsername as input and results the searched users github details on Enter inside input box or onClick on Search button.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Javascript/React based Learning project
+-Use of foreach for setting all parent to child text color to black and white on theme changed, from dark to white or white to dark.
+-Make/Use of Components, useState, useEffect, fetch.then etc. in JSX format using react.js
+-Others things can be observed like styling...
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-"# GitsSearchUser_ByUserName" 
+### Thanks for reading...Keep Coding and Learning
