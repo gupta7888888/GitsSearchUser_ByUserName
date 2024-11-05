@@ -1,0 +1,16 @@
+.container{
+    background-color: rgba(240, 238, 245, 0.068);
+}
+.fol_sec{
+    background-color: rgba(8, 8, 41, 0.959);
+}
+
+.search_div{
+    background-color: rgba(240, 238, 245, 0.068);
+    padding: 5px 20px;
+
+}
+
+.btn_cls{
+    padding: 5px 15px;
+}
