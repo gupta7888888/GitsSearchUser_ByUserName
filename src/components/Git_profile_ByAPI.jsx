@@ -54,6 +54,12 @@ function Git_Profile_ByAPI(){
         SetUsername(e.target.value)
     }
 
+    const keybrd_enter = (a)=>{
+        if (a.key==='Enter'){
+            fetchAPi()
+        }
+    }
+
     const [switch_mode, setSwitch_mode]= useState(true);
     const handleSwitchmode = () => {
         setSwitch_mode(!switch_mode);
@@ -105,8 +111,8 @@ function Git_Profile_ByAPI(){
                 </div>
             <div className=" flex text-[20px] search_div mb-5 rounded-[10px] items-center">
                 <div className="text-white"><FaSearch /></div>
-                <input className="bg-transparent outline-none placeholder:text-[15px] pl-8 text-white w-[450px] h-[60px] " value={username} onChange={handleChange} placeholder="Search Github username..." type="text" />
-                <button onClick={fetchAPi} className="text-white  font-bold bg-blue-800 rounded-[10px] btn_cls">Search</button>
+                <input onKeyPress={keybrd_enter} className="bg-transparent outline-none placeholder:text-[15px] pl-8 text-white w-[450px] h-[60px] " value={username} onChange={handleChange} placeholder="Search Github username..." type="text" />
+                <button onClick={fetchAPi}   className="text-white  font-bold bg-blue-800 rounded-[10px] btn_cls">Search</button>
             </div>
 
 
@@ -118,7 +124,7 @@ function Git_Profile_ByAPI(){
                 <div className="flex gap-20">
                 <div>
                     <p className="text-white font-bold">{fullname}</p>
-                    <p className="text-blue-600">{username}</p>
+                    <a className="text-blue-700 font-bold" href={`https://github.com/${username}`}>@{username}</a>
                 </div>
                 <div>
                     <p className="text-white">{join_date}</p>
@@ -149,7 +155,7 @@ function Git_Profile_ByAPI(){
                         </div>
                         {/* <div className="flex items-center gap-2"> */}
                         {blogurl ? (<a className="flex items-center gap-2" href={`${blogurl}`}><FaLink /></a>):
-                        (<a className="flex items-center gap-2" href="#"><FaLink />Blog Not found</a>)}
+                        (<p className="flex items-center gap-2"><FaLink />Blog Not found</p>)}
                         
                         {/* </div> */}
                         
@@ -161,10 +167,9 @@ function Git_Profile_ByAPI(){
                             e.preventDefault();
                             alert('No twitter account assosiated')
                         }} href='#'>
-                            <CiTwitter />Twitter</a>) }               
+                            <CiTwitter />Not Available</a>) }               
                         <div className="flex items-center gap-2">
-                        <HiOutlineBuildingOffice2 />
-                        <p>agithub</p>
+                        {workat ? (<p className="flex items-center gap-2"><HiOutlineBuildingOffice2/>{workat}</p>):(<p className="flex items-center gap-2"><HiOutlineBuildingOffice2/>Not Available</p>)}
                         </div>
                     </div>
                 </div>
